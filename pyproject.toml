@@ -1,0 +1,27 @@
+[project]
+name = "delta-lakefs-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dagster>=1.10.14",
+    "dagster-delta>=0.4.1",
+    "dagster-webserver>=1.10.14",
+    "lakefs>=0.10.0",
+    "polars>=1.29.0",
+    "python-dotenv>=1.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.dagster]
+module_name="delta_lakefs_demo.repo"
+code_location_name="delta_lakefs_demo"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
