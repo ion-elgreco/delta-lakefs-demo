@@ -6,6 +6,9 @@ _default:
 venv:
 	uv sync
 
+up:
+	docker compose up -V
+
 create-lakefs-branch:
 	uv run dagster job execute -f delta_lakefs_demo/repo.py --job create_lakefs_branches_job
 
